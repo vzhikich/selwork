@@ -1,0 +1,73 @@
+body {
+    background-color: #1a1a1a; /* Темно-синій фон */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.pageName{
+    display: inline-block;
+    margin-top: 1%;
+    padding: 10px 25px; 
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%; /* Займати всю ширину екрану */
+    z-index: 999; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    /* Додайте інші стилі за необхідності */
+}
+.statcontainer {
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    display: flex;
+    border-radius: 10px; /* Задайте радіус закруглення кутів */
+    flex-direction: column;
+    justify-content: start;
+    padding: 1px 20px;
+    text-align: center;
+    width: 70px; /* Задайте ширину контейнера відсотком від екрану */
+    float: left; /* Заставте контейнер плавати вліво */
+    z-index: 500; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+}
+.NameStats{
+    text-align:start;
+    margin-bottom: 1%;
+    z-index: 550; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+
+}
+
+#StrSquare, #DexSquare,#ConSquare,#IntSquare,#WisSquare,#ChaSquare{
+    width: 30px; /* Задайте ширину квадрату */
+    height: 25px; /* Задайте висоту квадрату */
+    padding: 1%; /* Додайте відступ всередині квадрату */
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    border-radius: 30%; /* Задайте радіус закруглення кутів */
+    resize: none; /* Забороніть зміну розміру */
+    font-family: Arial, sans-serif; /* Задайте шрифт */
+    background-color: #1a1a1a; /* Темно-синій фон */
+    color: white;
+    text-align:center;
+    font-size: large;
+    margin: 1% 25%;
+    position: relative;
+    margin-bottom: 20%;
+
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Займати всю ширину екрану */
+    z-index: 0; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    /* Додайте інші стилі за необхідності */
+}
+
+#saveBtn, #backBtn {
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 50px 20px;
+}
