@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
+
 .pageName{
     display: inline-block;
     margin-top: 1%;
@@ -12,8 +13,9 @@ body {
     font-weight: bold;
     width: 100%; /* Займати всю ширину екрану */
     z-index: 999; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
-    /* Додайте інші стилі за необхідності */
+    margin-bottom: 15px;
 }
+
 .statcontainer {
     border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
     display: flex;
@@ -24,18 +26,21 @@ body {
     text-align: center;
     width: 70px; /* Задайте ширину контейнера відсотком від екрану */
     float: left; /* Заставте контейнер плавати вліво */
-    z-index: 500; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    z-index: 100; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    margin-left: 10px;
 }
-.NameStats{
-    text-align:start;
-    margin-bottom: 1%;
-    z-index: 550; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
 
+.NameStats{
+    float:none;
+    margin-bottom: 1%;
+    z-index: 750; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    width: 70px;
+    margin-left: 10px;
 }
 
 #StrSquare, #DexSquare,#ConSquare,#IntSquare,#WisSquare,#ChaSquare{
     width: 30px; /* Задайте ширину квадрату */
-    height: 25px; /* Задайте висоту квадрату */
+    height: 30px; /* Задайте висоту квадрату */
     padding: 1%; /* Додайте відступ всередині квадрату */
     border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
     border-radius: 30%; /* Задайте радіус закруглення кутів */
@@ -47,10 +52,9 @@ body {
     font-size: large;
     margin: 1% 25%;
     position: relative;
-    margin-bottom: 20%;
+    margin-bottom: 40%;
 
 }
-
 
 .button-container {
     display: flex;
@@ -71,3 +75,96 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
     margin: 50px 20px;
 }
+
+.NameCharacter{
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    display: flex;
+    border-radius: 10px; /* Задайте радіус закруглення кутів */
+    flex-direction: column;
+    justify-content: start;
+    padding: 1px 20px;
+    text-align: center;
+    width: 170px; /* Задайте ширину контейнера відсотком від екрану */
+    float: left; /* Заставте контейнер плавати вліво */
+    z-index: 100; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#NameCharacterSquare{
+    width: 150px; /* Задайте ширину квадрату */
+    height: 25px; /* Задайте висоту квадрату */
+    border: 1px solid rgb(81, 81, 83); /* Додайте рамку */
+    border-radius: 15px; /* Задайте радіус закруглення кутів */
+    resize: none; /* Забороніть зміну розміру */
+    font-family: Arial, sans-serif; /* Задайте шрифт */
+    background-color: #1a1a1a; /* Темно-синій фон */
+    color: white;
+    text-align:center;
+    font-size: large;
+    margin: 4% 1%;
+    position: relative;
+}
+
+.CharacterClass{
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    border-radius: 10px; /* Задайте радіус закруглення кутів */
+    width: 400px; /* Задайте ширину контейнера відсотком від екрану */
+    float:inline-start; /* Заставте контейнер плавати вліво */
+    margin-left: 10px;
+    padding: 1px 20px;
+}
+
+.Class{
+    flex-direction: row;
+    justify-content: start;
+}
+
+#characterclassname,#charactersubclassname{
+    width: 150px; /* Задайте ширину квадрату */
+    height: 25px; /* Задайте висоту квадрату */
+    border: 1px solid rgb(81, 81, 83); /* Додайте рамку */
+    border-radius: 15px; /* Задайте радіус закруглення кутів */
+    resize: none; /* Забороніть зміну розміру */
+    font-family: Arial, sans-serif; /* Задайте шрифт */
+    background-color: #1a1a1a; /* Темно-синій фон */
+    color: white;
+    text-align:center;
+    font-size: large;
+    margin: 1% 1%;
+    position: relative;
+}
+
+.SaveStats{
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    display: flex;
+    border-radius: 10px; /* Задайте радіус закруглення кутів */
+    flex-direction: column;
+    justify-content: start;
+    width: 200px; /* Задайте ширину контейнера відсотком від екрану */
+    z-index: 200; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+    margin-left: 10px;
+    margin-top: 10px;
+    float:right; /* Заставте контейнер плавати вліво */
+}
+.textSave{
+    z-index: 100; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+}
+.valueSave{
+    z-index: 100; /* Встановлюємо велике значення z-index, щоб контейнер був поверх інших елементів */
+}
+#SaveStrSquare,#SaveDexSquare,#SaveConSquare,#SaveIntSquare,#SaveWisSquare,#SaveChaSquare{
+    width: 30px; /* Задайте ширину квадрату */
+    height: 30px; /* Задайте висоту квадрату */
+    padding: 1%; /* Додайте відступ всередині квадрату */
+    border: 5px solid rgb(81, 81, 83); /* Додайте рамку */
+    border-radius: 30%; /* Задайте радіус закруглення кутів */
+    resize: none; /* Забороніть зміну розміру */
+    font-family: Arial, sans-serif; /* Задайте шрифт */
+    background-color: #1a1a1a; /* Темно-синій фон */
+    color: white;
+    text-align:center;
+    float: left; /* Заставте контейнер плавати вліво */
+    font-size: large;
+    margin: 1% 5%;
+} 
