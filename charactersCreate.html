@@ -10,76 +10,216 @@
 </head>
 <body>
     <div class="pageName">Створення персонажа</div>
-    <div class="NameCharacter">
-        <div>Ім'я персонажа</div>
-        <textarea id="NameCharacterSquare" ></textarea>
+    <div class="container">
+        <div class="Characters Name">
+            Ім'я персонажа
+            <textarea id="CharacterName"></textarea>
+        </div>
+        <div class="Characters Class">
+            <div class="ClassCharacter">
+                <div class="dropdown"  id="dropdownClass">
+                    <button class="dropbtn ClassList">Клас Персонажа<span class="arrow-down"></span></button>
+                    <div class="dropdown-content">
+                      <a id="Bard" href="#" onclick="changeOptionClass('Бард')">Бард</a>
+                      <a id="Fighter" href="#" onclick="changeOptionClass('Боєць')">Боєць</a>
+                      <a id="Barbarian" href="#" onclick="changeOptionClass('Варвар')">Варвар</a>
+                      <a id="Druid" href="#" onclick="changeOptionClass('Друїд')">Друїд</a>
+                      <a id="Cleric" href="#" onclick="changeOptionClass('Жрець')">Жрець</a>
+                      <a id="Monk" href="#" onclick="changeOptionClass('Монах')">Монах</a>
+                      <a id="Paladin" href="#" onclick="changeOptionClass('Паладин')">Паладин</a>
+                      <a id="Ranger" href="#" onclick="changeOptionClass('Слідопит')">Слідопит</a>
+                      <a id="Rogue" href="#" onclick="changeOptionClass('Спритник')">Спритник</a>
+                      <a id="Wizard" href="#" onclick="changeOptionClass('Чарівник')">Чарівник</a>
+                      <a id="Warlog" href="#" onclick="changeOptionClass('Чаклун')">Чаклун</a>
+                      <a id="Sourcerer" href="#" onclick="changeOptionClass('Чародій')">Чародій</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="RaceCharacter">
+                Клас/Раса/Предісторія Персонажа
+                <div class="dropdown " id="dropdownRace">
+                    <button class="dropbtn Race">Раса Персонажа<span class="arrow-down"></span></button>
+                    <div class="dropdown-content">
+                      <a id="Dwarf" href="#" onclick="changeOptionRace('Дверг')" >Дверг</a>
+                      <a id="Elf" href="#" onclick="changeOptionRace('Ельф')">Ельф</a>
+                      <a id="Halfling" href="#" onclick="changeOptionRace('Напіврослик')">Напіврослик</a>
+                      <a id="Human" href="#" onclick="changeOptionRace('Людина')">Людина</a>
+                      <a id="Gnome" href="#" onclick="changeOptionRace('Гном')">Гном</a>
+                      <a id="GragonBorn" href="#" onclick="changeOptionRace('Драконороджений')">Драконороджений</a>
+                      <a id="HalfElf" href="#" onclick="changeOptionRace('Напів-Ельф')">Напів-Ельф</a>
+                      <a id="HalfOrc" href="#" onclick="changeOptionRace('Напів-Орк')">Напів-Орк</a>
+                      <a id="Tifling" href="#" onclick="changeOptionRace('Тифлінг')">Тифлінг</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="HistoryCharacter">
+                <div class="dropdown " id="dropdownHistory">
+                    <button class="dropbtn HistoryCharac">Предісторія Персонажа<span class="arrow-down"></span></button>
+                    <div class="dropdown-content">
+                      <a id="Artist" href="#" onclick="changeOptionHistory('Артист')" >Артист</a>
+                      <a id="Homeless" href="#" onclick="changeOptionHistory('Безпритульний')">Безпритульний</a>
+                      <a id="Blessed" href="#" onclick="changeOptionHistory('Благородний')">Благородний</a>
+                      <a id="GuildCraftsman" href="#" onclick="changeOptionHistory('Гельдійний ремісник')">Гельдійний ремісник</a>
+                      <a id="Offender" href="#" onclick="changeOptionHistory('Злочинець')">Злочинець</a>
+                      <a id="Sailor" href="#" onclick="changeOptionHistory('Моряк')">Моряк</a>
+                      <a id="Sage" href="#" onclick="changeOptionHistory('Мудрець')">Мудрець</a>
+                      <a id="FolkHero" href="#" onclick="changeOptionHistory('Народний Герой')">Народний Герой</a>
+                      <a id="Servant" href="#" onclick="changeOptionHistory('Прислужник')">Прислужник</a>
+                      <a id="Loner" href="#" onclick="changeOptionHistory('Самітник')">Самітник</a>
+                      <a id="Soldier" href="#" onclick="changeOptionHistory('Солдат')">Солдат</a>
+                      <a id="Stranger" href="#" onclick="changeOptionHistory('Чужинець')">Чужинець</a>
+                      <a id="Charlatan" href="#" onclick="changeOptionHistory('Шарлатан')">Шарлатан</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="Characters Stats">
+            Характеристики
+            <div class="Strength">
+                Сила
+                <textarea id="StrengthValue"></textarea>
+            </div>
+            <div class="Dexterity">
+                Вправність
+                <textarea id="DexterityValue"></textarea>
+            </div>
+            <div class="Constitution">
+                Статура
+                <textarea id="ConstitutionValue"></textarea>
+            </div>
+            <div class="Intelligence">
+                Інтелект
+                <textarea id="IntelligenceValue"></textarea>
+            </div>
+            <div class="Wisdom">
+                Мудрість
+                <textarea id="WisdomValue"></textarea>
+            </div>
+            <div class="Charisma">
+                Харизма
+                <textarea id="CharismaValue"></textarea>
+            </div>
+        </div>
+        <div class="Characters SaveD">
+            Кидки рятунку
+            <div class="StrengthSave">
+                <label class="checkbox-label" for="StrCheckbox">Сила:</label>
+                <input type="checkbox" id="Checkbox Str" class="checkbox-custom Str">
+            </div>
+            <div class="DexteritySave">
+                <label class="checkbox-label" for="DexCheckbox">Вправність:</label>
+                <input type="checkbox" id="Checkbox Dex" class="checkbox-custom Dex">
+            </div>
+            <div class="ConstitutionSave">
+                <label class="checkbox-label" for="ConCheckbox">Статура:</label>
+                <input type="checkbox" id="Checkbox Con" class="checkbox-custom Con">
+            </div>
+            <div class="IntelligenceSave">
+                <label class="checkbox-label" for="IntCheckbox">Інтелект:</label>
+                <input type="checkbox" id="Checkbox Int" class="checkbox-custom Int">
+            </div>
+            <div class="WisdomSave">
+                <label class="checkbox-label" for="WinCheckbox">Мудрість:</label>
+                <input type="checkbox" id="Checkbox Win" class="checkbox-custom Win">
+            </div>
+            <div class="CharismaSave">
+                <label class="checkbox-label" for="ChaCheckbox">Харизма:</label>
+                <input type="checkbox" id="Checkbox Cha" class="checkbox-custom Cha">
+            </div>
+        </div>
+        <div class="Characters Hits">
+            <div class="CharacterHit">
+                Максимальне здоров'я персонажа
+                <textarea id="MaxHpValue"></textarea>
+            </div>
+            <div class="CharacterArmor">
+                Броня персонажа
+                <textarea id="ArmorValue"></textarea>
+            </div>
+        </div>
+        <div class="Characters Skills">
+            <div class="firstSix">
+                <div class="Acrobatics">
+                    <label class="checkbox-label" for="AcrobaticsCheckbox">Акробатика:</label>
+                    <input type="checkbox" id="Checkbox Acrobatics" class="checkbox-custom Acrobatics">
+                </div>
+                <div class="BehavioralAnalysis">
+                    <label class="checkbox-label" for="BehavioralAnalysisCheckbox">Аналіз Поведінки:</label>
+                    <input type="checkbox" id="Checkbox BehavioralAnalysis" class="checkbox-custom BehavioralAnalysis">
+                </div>
+                <div class="Artistry">
+                    <label class="checkbox-label" for="ArtistryCheckbox">Артистичність:</label>
+                    <input type="checkbox" id="Checkbox Artistry" class="checkbox-custom Artistry">
+                </div>
+                <div class="Athletics">
+                    <label class="checkbox-label" for="AthleticsCheckbox">Атлетика:</label>
+                    <input type="checkbox" id="Checkbox Athletics" class="checkbox-custom Athletics">
+                </div>
+                <div class="Survival">
+                    <label class="checkbox-label" for="SurvivalCheckbox">Виживання:</label>
+                    <input type="checkbox" id="Checkbox Survival" class="checkbox-custom Survival">
+                </div>
+                <div class="AnimalCare">
+                    <label class="checkbox-label" for="AnimalCareCheckbox">Догляд за тваринами:</label>
+                    <input type="checkbox" id="Checkbox AnimalCare" class="checkbox-custom AnimalCare">
+                </div>
+            </div>
+            <div class="secondSix">
+                Володіння навичками
+                <div class="Intimidation">
+                    <label class="checkbox-label" for="IntimidationCheckbox">Залякування:</label>
+                    <input type="checkbox" id="Checkbox Intimidation" class="checkbox-custom Intimidation">
+                </div>
+                <div class="History">
+                    <label class="checkbox-label" for="HistoryCheckbox">Історія:</label>
+                    <input type="checkbox" id="Checkbox History" class="checkbox-custom History">
+                </div>
+                <div class="Medicine">
+                    <label class="checkbox-label" for="MedicineyCheckbox">Медецина:</label>
+                    <input type="checkbox" id="Checkbox Medicine" class="checkbox-custom Medicine">
+                </div>
+                <div class="Mysticism">
+                    <label class="checkbox-label" for="MysticismCheckbox">Містицизм:</label>
+                    <input type="checkbox" id="Checkbox Mysticism" class="checkbox-custom Mysticism">
+                </div>
+                <div class="Deception">
+                    <label class="checkbox-label" for="DeceptionCheckbox">Обман:</label>
+                    <input type="checkbox" id="Checkbox Deception" class="checkbox-custom Deception">
+                </div>
+                <div class="Examination">
+                    <label class="checkbox-label" for="ExaminationCheckbox">Обстеження:</label>
+                    <input type="checkbox" id="Checkbox Examination" class="checkbox-custom Examination">
+                </div>
+            </div>
+            <div class="thirdSix">
+                <div class="Persuasiveness">
+                    <label class="checkbox-label" for="PersuasivenessCheckbox">Переконливість:</label>
+                    <input type="checkbox" id="Checkbox Persuasiveness" class="checkbox-custom Persuasiveness">
+                </div>
+                <div class="Nature">
+                    <label class="checkbox-label" for="NatureCheckbox">Природа:</label>
+                    <input type="checkbox" id="Checkbox Nature" class="checkbox-custom Nature">
+                </div>
+                <div class="Religion">
+                    <label class="checkbox-label" for="ReligionCheckbox">Релігія:</label>
+                    <input type="checkbox" id="Checkbox Religion" class="checkbox-custom Religion">
+                </div>
+                <div class="Stealth">
+                    <label class="checkbox-label" for="StealthCheckbox">Скритність:</label>
+                    <input type="checkbox" id="Checkbox Stealth" class="checkbox-custom Stealth">
+                </div>
+                <div class="SleightHand">
+                    <label class="checkbox-label" for="SleightHandCheckbox">Спритність рук:</label>
+                    <input type="checkbox" id="Checkbox SleightHand" class="checkbox-custom SleightHand">
+                </div>
+                <div class="Attention">
+                    <label class="checkbox-label" for="AttentionCheckbox">Уважність:</label>
+                    <input type="checkbox" id="Checkbox Attention" class="checkbox-custom Attention">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="CharacterClass">
-        <div>Клас Персонажа</div>
-        <div class="Class">
-            <textarea id="characterclassname" ></textarea>
-            <textarea id="charactersubclassname" ></textarea>
-        </div>
-    </div>
-    <div>РядКидки</div>
-    <div class="SaveStats">
-        <div class="valueSave">
-            <textarea id="SaveStrSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Сила</div>
-        </div>
-        <div class="valueSave">
-            <textarea id="SaveDexSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Вправність</div>
-        </div>
-        <div class="valueSave">
-            <textarea id="SaveConSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Статура</div>
-        </div>
-        <div class="valueSave">
-            <textarea id="SaveIntSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Інтелект</div>
-        </div>
-        <div class="valueSave">
-            <textarea id="SaveWisSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Мудрість</div>
-        </div>
-        <div class="valueSave">
-            <textarea id="SaveChaSquare" ></textarea>
-        </div>
-        <div class="textSave">
-            <div>Харизма</div>
-        </div>
-    </div>
-
-    <div class="NameStats">Характеристики</div>
-    <div class="statcontainer">
-        <div>Сила</div>
-        <textarea id="StrSquare" ></textarea>
-        <div>Вправність</div>
-        <textarea id="DexSquare" ></textarea>
-        <div>Статура</div>
-        <textarea id="ConSquare" ></textarea>
-        <div>Інтелект</div>
-        <textarea id="IntSquare" ></textarea>
-        <div>Мудрість</div>
-        <textarea id="WisSquare" ></textarea>
-        <div>Харизма</div>
-        <textarea id="ChaSquare" ></textarea>
-    </div>
-
-
-
-
     <div class="button-container">
         <button id="saveBtn">Зберегти персонажа</button>
         <button id="backBtn">Повернутися назад</button>
