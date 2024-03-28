@@ -13,7 +13,7 @@
     <div class="container">
         <div class="Characters Name">
             Ім'я персонажа
-            <textarea id="CharacterName"></textarea>
+            <textarea id="CharacterName" oninput="restrictInput(event)"></textarea>
         </div>
         <div class="Characters Class">
             <div class="ClassCharacter">
@@ -55,171 +55,172 @@
             <div class="HistoryCharacter">
                 <div class="dropdown " id="dropdownHistory">
                     <button class="dropbtn HistoryCharac">Предісторія Персонажа<span class="arrow-down"></span></button>
-                    <div class="dropdown-content">
-                      <a id="Artist" href="#" onclick="changeOptionHistory('Артист')" >Артист</a>
-                      <a id="Homeless" href="#" onclick="changeOptionHistory('Безпритульний')">Безпритульний</a>
-                      <a id="Blessed" href="#" onclick="changeOptionHistory('Благородний')">Благородний</a>
-                      <a id="GuildCraftsman" href="#" onclick="changeOptionHistory('Гельдійний ремісник')">Гельдійний ремісник</a>
-                      <a id="Offender" href="#" onclick="changeOptionHistory('Злочинець')">Злочинець</a>
-                      <a id="Sailor" href="#" onclick="changeOptionHistory('Моряк')">Моряк</a>
-                      <a id="Sage" href="#" onclick="changeOptionHistory('Мудрець')">Мудрець</a>
-                      <a id="FolkHero" href="#" onclick="changeOptionHistory('Народний Герой')">Народний Герой</a>
-                      <a id="Servant" href="#" onclick="changeOptionHistory('Прислужник')">Прислужник</a>
-                      <a id="Loner" href="#" onclick="changeOptionHistory('Самітник')">Самітник</a>
-                      <a id="Soldier" href="#" onclick="changeOptionHistory('Солдат')">Солдат</a>
-                      <a id="Stranger" href="#" onclick="changeOptionHistory('Чужинець')">Чужинець</a>
-                      <a id="Charlatan" href="#" onclick="changeOptionHistory('Шарлатан')">Шарлатан</a>
-                    </div>
+                        <div class="dropdown-content">
+                          <a id="Artist" href="#" onclick="changeOptionHistory('Артист')" >Артист</a>
+                          <a id="Homeless" href="#" onclick="changeOptionHistory('Безпритульний')">Безпритульний</a>
+                          <a id="Blessed" href="#" onclick="changeOptionHistory('Благородний')">Благородний</a>
+                          <a id="GuildCraftsman" href="#" onclick="changeOptionHistory('Гельдійний ремісник')">Гельдійний ремісник</a>
+                          <a id="Offender" href="#" onclick="changeOptionHistory('Злочинець')">Злочинець</a>
+                          <a id="Sailor" href="#" onclick="changeOptionHistory('Моряк')">Моряк</a>
+                          <a id="Sage" href="#" onclick="changeOptionHistory('Мудрець')">Мудрець</a>
+                          <a id="FolkHero" href="#" onclick="changeOptionHistory('Народний Герой')">Народний Герой</a>
+                          <a id="Servant" href="#" onclick="changeOptionHistory('Прислужник')">Прислужник</a>
+                          <a id="Loner" href="#" onclick="changeOptionHistory('Самітник')">Самітник</a>
+                          <a id="Soldier" href="#" onclick="changeOptionHistory('Солдат')">Солдат</a>
+                          <a id="Stranger" href="#" onclick="changeOptionHistory('Чужинець')">Чужинець</a>
+                          <a id="Charlatan" href="#" onclick="changeOptionHistory('Шарлатан')">Шарлатан</a>
+                        </div>
                   </div>
             </div>
         </div>
 
         <div class="Characters Stats">
             Характеристики
-            <div class="Strength">
+            <div id="StatTextAreaes" class="Strength">
                 Сила
-                <textarea id="StrengthValue"></textarea>
+                <textarea id="StrengthValue" oninput="limitInput(this, 2)"></textarea>
             </div>
-            <div class="Dexterity">
+            <div id="StatTextAreaes" class="Dexterity">
                 Вправність
-                <textarea id="DexterityValue"></textarea>
+                <textarea id="DexterityValue" oninput="limitInput(this, 2)"></textarea>
             </div>
-            <div class="Constitution">
+            <div id="StatTextAreaes" class="Constitution">
                 Статура
-                <textarea id="ConstitutionValue"></textarea>
+                <textarea id="ConstitutionValue" oninput="limitInput(this, 2)"></textarea>
             </div>
-            <div class="Intelligence">
+            <div id="StatTextAreaes" class="Intelligence">
                 Інтелект
-                <textarea id="IntelligenceValue"></textarea>
+                <textarea id="IntelligenceValue" oninput="limitInput(this, 2)"></textarea>
             </div>
-            <div class="Wisdom">
+            <div id="StatTextAreaes" class="Wisdom" >
                 Мудрість
-                <textarea id="WisdomValue"></textarea>
+                <textarea id="WisdomValue" oninput="limitInput(this, 2)"></textarea>
             </div>
-            <div class="Charisma">
+            <div id="StatTextAreaes" class="Charisma">
                 Харизма
-                <textarea id="CharismaValue"></textarea>
+                <textarea id="CharismaValue" oninput="limitInput(this, 2)"></textarea>
             </div>
         </div>
         <div class="Characters SaveD">
             Кидки рятунку
             <div class="StrengthSave">
                 <label class="checkbox-label" for="StrCheckbox">Сила:</label>
-                <input type="checkbox" id="Checkbox Str" class="checkbox-custom Str">
+                <input type="checkbox" id="Checkbox Str" class="checkbox-custom Str"onclick="limitCheckbox(this)">
             </div>
             <div class="DexteritySave">
                 <label class="checkbox-label" for="DexCheckbox">Вправність:</label>
-                <input type="checkbox" id="Checkbox Dex" class="checkbox-custom Dex">
+                <input type="checkbox" id="Checkbox Dex" class="checkbox-custom Dex" onclick="limitCheckbox(this)">
             </div>
             <div class="ConstitutionSave">
                 <label class="checkbox-label" for="ConCheckbox">Статура:</label>
-                <input type="checkbox" id="Checkbox Con" class="checkbox-custom Con">
+                <input type="checkbox" id="Checkbox Con" class="checkbox-custom Con" onclick="limitCheckbox(this)">
             </div>
             <div class="IntelligenceSave">
                 <label class="checkbox-label" for="IntCheckbox">Інтелект:</label>
-                <input type="checkbox" id="Checkbox Int" class="checkbox-custom Int">
+                <input type="checkbox" id="Checkbox Int" class="checkbox-custom Int" onclick="limitCheckbox(this)">
             </div>
             <div class="WisdomSave">
                 <label class="checkbox-label" for="WinCheckbox">Мудрість:</label>
-                <input type="checkbox" id="Checkbox Win" class="checkbox-custom Win">
+                <input type="checkbox" id="Checkbox Win" class="checkbox-custom Win" onclick="limitCheckbox(this)">
             </div>
             <div class="CharismaSave">
                 <label class="checkbox-label" for="ChaCheckbox">Харизма:</label>
-                <input type="checkbox" id="Checkbox Cha" class="checkbox-custom Cha">
+                <input type="checkbox" id="Checkbox Cha" class="checkbox-custom Cha" onclick="limitCheckbox(this)">
             </div>
         </div>
         <div class="Characters Hits">
             <div class="CharacterHit">
                 Максимальне здоров'я персонажа
-                <textarea id="MaxHpValue"></textarea>
+                <textarea id="MaxHpValue" oninput="limitInputHits(this, 2)"></textarea>
             </div>
             <div class="CharacterArmor">
                 Броня персонажа
-                <textarea id="ArmorValue"></textarea>
+                <textarea id="ArmorValue" oninput="limitInputHits(this, 2)"></textarea>
             </div>
         </div>
         <div class="Characters Skills">
             <div class="firstSix">
                 <div class="Acrobatics">
                     <label class="checkbox-label" for="AcrobaticsCheckbox">Акробатика:</label>
-                    <input type="checkbox" id="Checkbox Acrobatics" class="checkbox-custom Acrobatics">
+                    <input type="checkbox" id="Checkbox Acrobatics" class="checkbox-custom Acrobatics" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="BehavioralAnalysis">
                     <label class="checkbox-label" for="BehavioralAnalysisCheckbox">Аналіз Поведінки:</label>
-                    <input type="checkbox" id="Checkbox BehavioralAnalysis" class="checkbox-custom BehavioralAnalysis">
+                    <input type="checkbox" id="Checkbox BehavioralAnalysis" class="checkbox-custom BehavioralAnalysis" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Artistry">
                     <label class="checkbox-label" for="ArtistryCheckbox">Артистичність:</label>
-                    <input type="checkbox" id="Checkbox Artistry" class="checkbox-custom Artistry">
+                    <input type="checkbox" id="Checkbox Artistry" class="checkbox-custom Artistry" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Athletics">
                     <label class="checkbox-label" for="AthleticsCheckbox">Атлетика:</label>
-                    <input type="checkbox" id="Checkbox Athletics" class="checkbox-custom Athletics">
+                    <input type="checkbox" id="Checkbox Athletics" class="checkbox-custom Athletics" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Survival">
                     <label class="checkbox-label" for="SurvivalCheckbox">Виживання:</label>
-                    <input type="checkbox" id="Checkbox Survival" class="checkbox-custom Survival">
+                    <input type="checkbox" id="Checkbox Survival" class="checkbox-custom Survival" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="AnimalCare">
                     <label class="checkbox-label" for="AnimalCareCheckbox">Догляд за тваринами:</label>
-                    <input type="checkbox" id="Checkbox AnimalCare" class="checkbox-custom AnimalCare">
+                    <input type="checkbox" id="Checkbox AnimalCare" class="checkbox-custom AnimalCare" onclick="limitSkillsCheckbox(this)">
                 </div>
             </div>
             <div class="secondSix">
                 Володіння навичками
                 <div class="Intimidation">
                     <label class="checkbox-label" for="IntimidationCheckbox">Залякування:</label>
-                    <input type="checkbox" id="Checkbox Intimidation" class="checkbox-custom Intimidation">
+                    <input type="checkbox" id="Checkbox Intimidation" class="checkbox-custom Intimidation" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="History">
                     <label class="checkbox-label" for="HistoryCheckbox">Історія:</label>
-                    <input type="checkbox" id="Checkbox History" class="checkbox-custom History">
+                    <input type="checkbox" id="Checkbox History" class="checkbox-custom History" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Medicine">
                     <label class="checkbox-label" for="MedicineyCheckbox">Медецина:</label>
-                    <input type="checkbox" id="Checkbox Medicine" class="checkbox-custom Medicine">
+                    <input type="checkbox" id="Checkbox Medicine" class="checkbox-custom Medicine" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Mysticism">
                     <label class="checkbox-label" for="MysticismCheckbox">Містицизм:</label>
-                    <input type="checkbox" id="Checkbox Mysticism" class="checkbox-custom Mysticism">
+                    <input type="checkbox" id="Checkbox Mysticism" class="checkbox-custom Mysticism" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Deception">
                     <label class="checkbox-label" for="DeceptionCheckbox">Обман:</label>
-                    <input type="checkbox" id="Checkbox Deception" class="checkbox-custom Deception">
+                    <input type="checkbox" id="Checkbox Deception" class="checkbox-custom Deception" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Examination">
                     <label class="checkbox-label" for="ExaminationCheckbox">Обстеження:</label>
-                    <input type="checkbox" id="Checkbox Examination" class="checkbox-custom Examination">
+                    <input type="checkbox" id="Checkbox Examination" class="checkbox-custom Examination" onclick="limitSkillsCheckbox(this)">
                 </div>
             </div>
             <div class="thirdSix">
                 <div class="Persuasiveness">
                     <label class="checkbox-label" for="PersuasivenessCheckbox">Переконливість:</label>
-                    <input type="checkbox" id="Checkbox Persuasiveness" class="checkbox-custom Persuasiveness">
+                    <input type="checkbox" id="Checkbox Persuasiveness" class="checkbox-custom Persuasiveness" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Nature">
                     <label class="checkbox-label" for="NatureCheckbox">Природа:</label>
-                    <input type="checkbox" id="Checkbox Nature" class="checkbox-custom Nature">
+                    <input type="checkbox" id="Checkbox Nature" class="checkbox-custom Nature" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Religion">
                     <label class="checkbox-label" for="ReligionCheckbox">Релігія:</label>
-                    <input type="checkbox" id="Checkbox Religion" class="checkbox-custom Religion">
+                    <input type="checkbox" id="Checkbox Religion" class="checkbox-custom Religion" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Stealth">
                     <label class="checkbox-label" for="StealthCheckbox">Скритність:</label>
-                    <input type="checkbox" id="Checkbox Stealth" class="checkbox-custom Stealth">
+                    <input type="checkbox" id="Checkbox Stealth" class="checkbox-custom Stealth" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="SleightHand">
                     <label class="checkbox-label" for="SleightHandCheckbox">Спритність рук:</label>
-                    <input type="checkbox" id="Checkbox SleightHand" class="checkbox-custom SleightHand">
+                    <input type="checkbox" id="Checkbox SleightHand" class="checkbox-custom SleightHand" onclick="limitSkillsCheckbox(this)">
                 </div>
                 <div class="Attention">
                     <label class="checkbox-label" for="AttentionCheckbox">Уважність:</label>
-                    <input type="checkbox" id="Checkbox Attention" class="checkbox-custom Attention">
+                    <input type="checkbox" id="Checkbox Attention" class="checkbox-custom Attention" onclick="limitSkillsCheckbox(this)">
                 </div>
             </div>
         </div>
     </div>
+
     <div class="button-container">
         <button id="saveBtn">Зберегти персонажа</button>
         <button id="backBtn">Повернутися назад</button>

@@ -173,8 +173,8 @@ body {
     }
 
     #StrengthValue, #DexterityValue,#ConstitutionValue,#IntelligenceValue,#WisdomValue,#CharismaValue,#MaxHpValue,#ArmorValue{
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         padding: 1%;
         border: 5px solid rgb(81, 81, 83);
         border-radius: 30%;
@@ -272,20 +272,6 @@ body {
     .checkbox-custom:checked {
       background-color: rgb(20, 184, 50);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .button-container {
