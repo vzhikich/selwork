@@ -38,7 +38,7 @@ contactFormDB.once('value')
         buttons[index] = button;
     });
 
-    
+
 
   })
   .catch((error) => {
@@ -65,6 +65,6 @@ contactFormDB.once('value')
 // skillDice4 : SkillsCheckboxes[3].id,
 const BackButton = document.getElementById('backBtn');
 BackButton.addEventListener('click', function(){
-    window.location.href = 'index.html';
+    window.location.href = './';
 });
 

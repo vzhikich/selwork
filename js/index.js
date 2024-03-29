@@ -21,9 +21,9 @@ const button = document.getElementById('CharactersBtn');
 const createButton = document.getElementById('CharactersCreateBtn');
 
 createButton.addEventListener('click', function(){
-    window.location.href = '../charactersCreate.html';
+    window.location.href = './charactersCreate';
 })
 
 button.addEventListener('click', function() {
-    window.location.href = '../characters.html';
+    window.location.href = './characters';
 });

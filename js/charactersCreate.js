@@ -23,7 +23,7 @@ document.getElementById('backBtn').addEventListener('click', function(){
     const answer=confirm("Бажаєте вийти? Персонажа не буде збережено!");
     if (answer) {
         console.log("Вихід з сторінки");
-        window.location.href = '../index.html';
+        window.location.href = './';
     }
 })
 
