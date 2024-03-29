@@ -18,7 +18,7 @@
         <div class="Characters Class">
             <div class="ClassCharacter">
                 <div class="dropdown"  id="dropdownClass">
-                    <button class="dropbtn ClassList">Клас Персонажа<span class="arrow-down"></span></button>
+                    <button class="dropbtn ClassList" id="classlistId">Клас Персонажа<span class="arrow-down"></span></button>
                     <div class="dropdown-content">
                       <a id="Bard" href="#" onclick="changeOptionClass('Бард')">Бард</a>
                       <a id="Fighter" href="#" onclick="changeOptionClass('Боєць')">Боєць</a>
@@ -39,7 +39,7 @@
                 Клас/Раса/Предісторія Персонажа
                 <div class="dropdown " id="dropdownRace">
                     <button class="dropbtn Race">Раса Персонажа<span class="arrow-down"></span></button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" id="racelistId">
                       <a id="Dwarf" href="#" onclick="changeOptionRace('Дверг')" >Дверг</a>
                       <a id="Elf" href="#" onclick="changeOptionRace('Ельф')">Ельф</a>
                       <a id="Halfling" href="#" onclick="changeOptionRace('Напіврослик')">Напіврослик</a>
@@ -55,7 +55,7 @@
             <div class="HistoryCharacter">
                 <div class="dropdown " id="dropdownHistory">
                     <button class="dropbtn HistoryCharac">Предісторія Персонажа<span class="arrow-down"></span></button>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" id="historylistId">
                           <a id="Artist" href="#" onclick="changeOptionHistory('Артист')" >Артист</a>
                           <a id="Homeless" href="#" onclick="changeOptionHistory('Безпритульний')">Безпритульний</a>
                           <a id="Blessed" href="#" onclick="changeOptionHistory('Благородний')">Благородний</a>
@@ -227,7 +227,7 @@
     </div>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="js/charactersCreate.js"></script>
 </body>
 </html>
