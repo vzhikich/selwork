@@ -76,7 +76,7 @@ function saveButtonHandler(event){
         saveMesage(nametextArea.value, maxHP.value, armor.value);
         alert("Персонажа збережено!");
         console.log("Вихід з сторінки");
-        window.location.href = './';
+        window.location.href = './index.html';
     }
 }
 
